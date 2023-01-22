@@ -1,7 +1,13 @@
-# SuperMarioBros_DevEmDobro
+# Página: Super Mário Bros
 
-* [Html: A Base do FrontEnd](LINK)
-* [CSS: Estilizando o Projeto](LINK)
+Projeto realizado junto com os gêmeos "Dev em Dobro", utilizando Html, CSS e JavaScript. 
+
+![image](https://user-images.githubusercontent.com/108991648/213933932-ff78b943-71d5-440c-bcc8-0f3a1ab599c0.png)
+
+<hr>
+
+* [Html: A Base do FrontEnd](https://github.com/PamelaRondina/SuperMarioBros_DevEmDobro#html-a-base-do-frontend)
+* [CSS: Estilizando o Projeto](https://github.com/PamelaRondina/SuperMarioBros_DevEmDobro#css-estilizando-o-projeto)
 * [JavaScript: Incluindo ação no projeto](LINK)
 
 <hr>
@@ -368,7 +374,7 @@ laterais escuras e miolo colorido
 
 <hr>
 
-* [JavaScript: Incluindo ação no projeto](LINK)
+## JavaScript: Incluindo ação no projeto
 
 - [x] Em `src` criar diretório `js` e criar arquivo `index.js`
 - No arquivo `index.html` fazer a menção do js:
