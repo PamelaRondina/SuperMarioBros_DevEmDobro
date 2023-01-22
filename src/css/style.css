@@ -78,7 +78,7 @@ body {
     height: 100vh;
     overflow: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
 }
 
 .fundo-video .video {
@@ -102,8 +102,7 @@ body {
     top: 0;
     left: 0;
     background-color: rgba(52, 52, 50, 0.749);
-    visibility: hidden;
-    
+    visibility: hidden;  
 }
 
 .conteudo-modal {
@@ -124,13 +123,14 @@ body {
     width: 40px;
     text-align: center;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 50px;
 }
 
 .modal iframe {
     border-width: 0;
     width: 640px;
     height: 360;;
+    border-radius: 40px;  
 }
 
 .modal.aberto {

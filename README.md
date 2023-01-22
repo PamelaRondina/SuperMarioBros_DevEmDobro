@@ -2,6 +2,7 @@
 
 * [Html: A Base do FrontEnd](LINK)
 * [CSS: Estilizando o Projeto](LINK)
+* [JavaScript: Incluindo ação no projeto](LINK)
 
 <hr>
 
@@ -296,7 +297,7 @@ a {
 
 laterais escuras e miolo colorido
 
-## Criar Modal no Html
+### Criar Modal no Html
 
 - [x] Em `index.html` no final da main criar uma nova div:
 
@@ -358,9 +359,21 @@ laterais escuras e miolo colorido
 }
 ```
 
-## Criar Responsividade em telas
+### Criar Responsividade em telas
 
 - [x] Criar `resposive.css` e mencionar no html
 
 - flex-wrap: wrap = se não tem espaço, joga a imagem pra baixo
 - max-width: 50%; = reduzir a imagem 
+
+<hr>
+
+* [JavaScript: Incluindo ação no projeto](LINK)
+
+- [x] Em `src` criar diretório `js` e criar arquivo `index.js`
+- No arquivo `index.html` fazer a menção do js:
+    - após a ultima `main`e `body`
+
+```html
+<script src="src/js/index.js"></script>
+```
