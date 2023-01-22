@@ -1,14 +1,29 @@
 # Página: Super Mário Bros
 
-Projeto realizado junto com os gêmeos "Dev em Dobro", utilizando Html, CSS e JavaScript. 
+Este projeto teve como objetivo realizar um site mencionando o Trailer do filme "Super Mario Bros". 
+
+Tecnologias de Front-End com Html, CSS e JavaScript
 
 ![image](https://user-images.githubusercontent.com/108991648/213933932-ff78b943-71d5-440c-bcc8-0f3a1ab599c0.png)
+
+![image](https://user-images.githubusercontent.com/108991648/213934852-e8a121e8-8aa9-4920-b416-54a61118aa55.png)
+
+<hr>
+
+# Semana Dev Em Dobro - Criação de Site 
+
+Instrutores:
+- [Dev em Dobro](https://www.youtube.com/c/devemdobro)
 
 <hr>
 
 * [Html: A Base do FrontEnd](https://github.com/PamelaRondina/SuperMarioBros_DevEmDobro#html-a-base-do-frontend)
 * [CSS: Estilizando o Projeto](https://github.com/PamelaRondina/SuperMarioBros_DevEmDobro#css-estilizando-o-projeto)
-* [JavaScript: Incluindo ação no projeto](LINK)
+    - arquivo [`reset.css`](https://github.com/PamelaRondina/SuperMarioBros_DevEmDobro#resetcss);
+    - arquivo [`style.css`](https://github.com/PamelaRondina/SuperMarioBros_DevEmDobro#stylecss);
+    - [Criar uma modal](https://github.com/PamelaRondina/SuperMarioBros_DevEmDobro#criar-modal-no-html)
+    - arquivo [`responsive.css`](https://github.com/PamelaRondina/SuperMarioBros_DevEmDobro#criar-responsividade-em-telas)
+* [JavaScript: Incluindo ação no projeto](https://github.com/PamelaRondina/SuperMarioBros_DevEmDobro#javascript-incluindo-a%C3%A7%C3%A3o-no-projeto)
 
 <hr>
 
@@ -44,8 +59,8 @@ Projeto realizado junto com os gêmeos "Dev em Dobro", utilizando Html, CSS e Ja
             </ul>
         </nav>
 ```
-**ul** lista não ordenada
-**li** lista ordenada
+- **ul** lista não ordenada
+- **li** lista ordenada
 
 ```html
     <main class="container">
@@ -58,11 +73,11 @@ Projeto realizado junto com os gêmeos "Dev em Dobro", utilizando Html, CSS e Ja
         <img class="mario" src="src/images/super-mario-chars.png" alt="turminha do Mário">    
     </main>
 ```
-**p** parágrafo
-**button** botão
+- **p** parágrafo
+- **button** botão
 
 - [x] Inserir Fonte 
-- [x] Inserir Favicon
+- [x] [Inserir Favicon](https://github.com/PamelaRondina/step-by-step/tree/main/html#adicionar-favicon)
 
 <hr>
 
@@ -117,9 +132,7 @@ a {
 - [x] Dentro do diretório `css` incluir um novo arquivo `style.css`
 - [x] No arquivo `index.html` fazer a menção do css
 
-## Body
-
-## Header
+## Body | Header
 
 ### Cabeçalho
 
@@ -155,7 +168,7 @@ a {
 - height = altura / espaçamento
 - align-items: center = alinhar no centro
 
-- [x] No ``index.html` incluir o link na navegação:
+- [x] No `index.html` incluir o link na navegação:
 
 ```html
 <li><a href="#">Home</a></li>
@@ -382,4 +395,58 @@ laterais escuras e miolo colorido
 
 ```html
 <script src="src/js/index.js"></script>
+```
+
+Itens importantes:
+- [x] 1: Clicar no botão "Veja o Trailer", abrir a modal com o vídeo do trailer
+    - passo 1: pegar o elemento que representa o botão na tela usando o js
+    - passo 2: identificar quando o usuário clicar no botão
+    - passo 3: pegar o elemento da modal no js
+    - passo 4: abrir a modal na tela
+
+- [x] 2: Clicar no X, fechar a modal
+    - passo 1: pegar o elemento e fechar a modal usando o js
+    - passo 2: identificar quando o usuário clicar no "X"
+    - passo 3: fechar a modal
+    - passo 4: remover audio do trailer
+
+```js
+//1.1 - Buscando a representação do documento na Tela:
+const botaoTrailer = document.querySelector(".botao-trailer");
+
+//1.3: pegar o elemento da modal no js
+const modal = document.querySelector(".modal");
+
+//2.1: pegar o elemento e fechar a modal usando o js
+const botaoFecharModal = document.querySelector(".fechar-modal");
+
+//2.4: remover audio do trailer
+//pegue o elemento por um ID = getElementById
+const video = document.getElementById("video");
+
+// link do video do Trailer
+const linkDoVideo = video.src;
+
+function alternarModal(){
+       //classlist = propriedade
+    modal.classList.toggle("aberto"); 
+}
+
+// 1.2. - identificar quando o usuário clicar no botão
+// quando clicar no botão Trailer vai executar 
+botaoTrailer.addEventListener("click", () => {
+    //1.4: abrir a modal na tela - chamar a função
+    alternarModal();   
+    video.setAttribute("src", linkDoVideo);   
+});
+
+//2.2: identificar quando o usuário clicar no "X"
+botaoFecharModal.addEventListener("click", () => {
+    //2.3: fechar a modal
+    alternarModal(); 
+    //2.4: remover audio do trailer
+    //setAtribute = separar um atributo (no caso o src do video | link do Trailer)
+    video.setAttribute("src", "");
+});
+
 ```
