@@ -10,25 +10,30 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@100;300;500&family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="src/css/reset.css">
+        <link rel="stylesheet" href="src/css/style.css">
+        <link rel="stylesheet" href="src/css/responsive.css">
+        
         
         <title>Super Mario Bros - O Filme</title>
     </head>
 
     <body>
-        <div class="video">
+        <div class="fundo-video">
             <video class="video" autoplay loop muted>
                 <source src="src/video/video-mario.mp4" type="video/mp4">
             </video>
         </div>
 
         <header class="cabecalho">
-            <a>   <img src="src/images/logo-chapeu-mario.png" alt="logo chapéu do Mário">    
+            <a>   <img class="logo" src="src/images/logo-chapeu-mario.png" alt="logo chapéu do Mário">    
             </a>
             
             <nav>
                 <ul class="menu">
-                    <li>Home</li>
-                    <li>Detalhes</li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Detalhes</a></li>                    
                 </ul>
             </nav>
         </header>
@@ -36,11 +41,20 @@
         <main class="container">
             <div class="informacoes"> 
                 <img class="imagem-titulo" src="src/images/titulo.png" alt="imagem do título do filme">
-                <p class="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga explicabo voluptas laudantium voluptatibus molestiae quam architecto provident ipsam ex temporibus minima vitae adipisci, omnis aperiam illo non fugiat ea consequatur.</p>
+                <p class="descricao">Realizar este projeto está sendo uma experiência divertida! Além de estar relacionado com o Mário (personagem e turma na qual sou fã!), estou aprendendo a utilizar o Html, Css e JS.  Obrigada DevEmDobro :)!.</p>
                 <button class="botao-trailer">Veja o Trailer
                 </button>
             </div>
-            <img class="mario" src="src/images/super-mario-chars.png" alt="turminha do Mário">    
+            
+            <img class="mario" src="src/images/super-mario-chars.png" alt="turminha do Mário"/>    
+
+            <div class="modal">
+                <div class="conteudo-modal">
+                    <span class="fechar-modal">X</span>
+                    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/Cb4WV4aXBpk" title="Trailer oficial" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
         </main>
 
     </body>
