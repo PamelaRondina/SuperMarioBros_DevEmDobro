@@ -76,7 +76,7 @@ Instrutores:
 - **p** parágrafo
 - **button** botão
 
-- [x] Inserir Fonte 
+- [x] [Inserir Fonte](https://github.com/PamelaRondina/menu_digital#aula-03---fontes-e-textos)
 - [x] [Inserir Favicon](https://github.com/PamelaRondina/step-by-step/tree/main/html#adicionar-favicon)
 
 <hr>
