@@ -36,6 +36,8 @@ Instrutores:
 
 - [x] No arquivo `index.html`
 
+**video**
+
 ```html
    <div class="video">
         <video class="video" autoplay loop muted>
@@ -45,22 +47,28 @@ Instrutores:
 ```
 **video** Div criada para a inclusão de um vídeo
 
-```html
-<a>   <img src="src/images/logo-chapeu-mario.png" alt="logo chapéu do Mário">     </a>
-```
-- **src** para localizar o arquivo
-- **alt** para escrever o texto alternativo
+**Cabeçalho**
 
 ```html
- <nav>
-            <ul class="menu">
-                <li>Home</li>
-                <li>Detalhes</li>
-            </ul>
-        </nav>
+   <header class="cabecalho">
+            <a>   <img class="logo" src="src/images/logo-chapeu-mario.png" alt="logo chapéu do Mário">    
+            </a>
+            
+            <nav>
+                <ul class="menu">
+                    <li><a href="https://github.com/PamelaRondina/SuperMarioBros_DevEmDobro">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/pamelarondina/">LinkedIn</a></li>                    
+                </ul>
+            </nav>
+        </header>
 ```
+
+- **src** para localizar o arquivo
+- **alt** para escrever o texto alternativo
 - **ul** lista não ordenada
 - **li** lista ordenada
+
+**Container**
 
 ```html
     <main class="container">
@@ -132,9 +140,15 @@ a {
 - [x] Dentro do diretório `css` incluir um novo arquivo `style.css`
 - [x] No arquivo `index.html` fazer a menção do css
 
-## Body | Header
+** Incluir Fonte**
 
-### Cabeçalho
+```css
+body {
+    font-family: 'Poppins';
+}
+```
+
+**Body > Header > Cabeçalho**
 
 ```css
 .cabecalho {
@@ -156,7 +170,7 @@ a {
     width: 65px;
 }
 ```
-- widht = alterar o tamanho da imagem
+- widht = alterar o tamanho da imagem do logo
 
 ```css
 .cabecalho .menu {
@@ -167,15 +181,6 @@ a {
 - display-flex = faz com que os elementos fiquem um ao lado do outro
 - height = altura / espaçamento
 - align-items: center = alinhar no centro
-
-- [x] No `index.html` incluir o link na navegação:
-
-```html
-<li><a href="#">Home</a></li>
-<li><a href="#">Detalhes</a></li>    
-```
-
-- [x] No `style.css`, nos itens de navegação: Detalhes e Home
 
 ```css
 .cabecalho nav li a {
@@ -200,8 +205,9 @@ a {
     background-color: #d5011d;
 }
 ```
-
 - Ao clicar nos botões de navegação, sua cor será alterada
+
+**Body > Main > Container**
 
 ```css
 .container {
@@ -222,6 +228,13 @@ a {
 ![image](https://user-images.githubusercontent.com/108991648/213796484-2e3cc794-b050-4f10-a681-1fde1cc0ee14.png)
 
 ```css
+.container .imagem-titulo {
+    max-width: 500px;
+}
+```
+- tamanho da imagem
+
+```css
 .container .descricao {
     color: #a8adb7;
     width: 85%;
@@ -229,7 +242,6 @@ a {
     margin: 30px 0;
 }
 ```
-
 - color: #a8adb7 = cor da letra da descrição
 - width: 85% = largura
 - font-size: 18px = tamanaho da fonte
@@ -268,6 +280,8 @@ a {
 ```
 
 - transform: scale(1.2) = ativa a pulsação
+
+**Vídeo de Fundo**
 
 ```css
 .fundo-video {
